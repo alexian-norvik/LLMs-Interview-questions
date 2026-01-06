@@ -14,3 +14,35 @@ The context window defines how many tokens the model can attend to at one time. 
 
 ## 5. What are embedding layers and why are they important?
 Embedding layers are the entry point of LLMs. They map discrete tokens into high-dimensional continuous vectors, allowing the model to capture syntactic and semantic relationships. Words with similar meanings, like "car", and "vehicle", will have embeddings close in vector space, which improves the model's ability to generalize language.
+
+## 6. How do LLMs handle out-of-vocabulary (OOV) words?
+Unlike earlier NLP systems with fixed vocabularies, modern LLMs mitigate OOV issues via subword tokenization. Unknown words are decomposed into known sub-units. For example, "bioinformatics" could be tokenized as "bio", "inform", "atics". This strategy ensures that the model can interpret new or rare words contextually.
+
+## 7. What are the most common real-world use cases for LLMs?
+LLMs power a broad spectrum of AI applications, including:
+* Conversational AI (chatbots, voice assistants)
+* Content creation (blogs, ads, summaries)
+* Code generation & completion (GitHub Copilot)
+* Information retrieval and Q&A
+* Sentiment analysis and moderation
+* Language Transalation and localization
+
+## 8. What is fine-tuning and why is it used?
+Fine-tuning is the process of continuing training on a smaller, domain-specific dataset after general pretraining. It allows LLMs to specialize in a particular industry (e.g., legal, healthcare, finance) or task (e.g., summarization, classification). It improves performance, reduce hallucination, and enables alignment with brand or organizational voice.
+
+## 9. What is prompt engineering?
+Prompt engineering involves crafting precise input prompts that guide the model toward a desired output. It's critical when using models in a zero-shot or few-shot setting. A well-engineered prompt can significantly improve model performance without requiring retraining-making it a high-leverage skill for AI practitioners.
+
+## 10. What is zero-shot learning in the context of LLMs?
+Zero-shot learning refers to the model's ability to perform tasks without prior examples. For instance, asking in LLM, "Translate 'good morning' into Japanese" assumes the model can infer the instruction and complete the task without training examples. This showcases the model's inherent generalization capability.
+
+## 11. What is few-shot learning and how does it differ from zero-shot?
+Few-shot learning involves giving the model a small numer of task-specific examples within the prompt. This primes the model for the expected structure and output style. For instance, few-shot prompting is particularly effecitve in classification, summarization, or role-based dialogue simulations.
+
+## 12. What are the main challenges of deploying LLMs in production?
+key challenges include:
+* Cost: Serving large language models requires GPUs or TPUs.
+* Latency: Response time can be high for large inputs.
+* Hallucination: LLMs may confidently generate incorrect information.
+* Bias: Models may reflect societal or dataset biases.
+* Data privacy: Sensitive inputs need to be managed carefully.
