@@ -74,3 +74,71 @@ Traditional NLP approaches were task-specific and relied heavily on feature engi
 
 ## 20. Can LLMs understand non-textual data like images or audio?
 Base LLMs are text-only. However, multimodal models like GPT-4o, Gemini, and Claude 3 Opus integrate vision, audio, and even video. These models can process PDFs, screenshots, diagrams, or spoken language-expanding the scope of LLM applications beyond traditional NLP.
+
+## 21. What is the Transformer architecture and why is it foundational to LLMs?
+The Transformer is a neural network architecture introduced in 2017 through the "Attention is All You Need" paper. It replaced recurrence with self-attention mechanisms, enabling parallel computation and long-range dependency modeling. LLMs like GPT, BERT, and T5 are built upon Transformer blocks, making it the backbone of modern NLP.
+
+## 22. What is self-attention in LLMs?
+Self-attention allows the model to focus on different words in a sentence based on their relevance. It computes a weighted representation for each word by considering all others in the sequence, enabling nuanced understanding of grammar, co-reference, and context, key for tasks like translation and summarization.
+
+## 23. How do positional encodings work in Transformers?
+Since Transformers lack recurrence, they use positional encodings to inject information about word order. These encodings are added to token embeddings and can be sinusoidal or learned. This lets the model distinguish between sequences like "cat sat on mat" vs. "mat sat on cat".
+
+## 24. What is the difference between encoder-only, decoder-only, and encoder-decoder models?
+* Encoder-only (e.g., BERT): Used for understanding tasks like classification.
+* Decoder-only (e.g., GPT): Suited for generative tasks like text completion.
+* Encoder-decoder (e.g., T5, BART): ideal for sequence-to-sequence tasks like translation or summarization.
+
+## 25. What is instruction tuning?
+Instruction tuning involves fine-tuning LLMs using prompts framed as instruction paired with ideal responses. This helps models follow human commands better in zero-shot settings and improves alignment with real-world user intents, crucial for LLM-as-a-service platforms.
+
+## 26. What is RLHF (Reinforcement Learning with Human Feedback)?
+RLHF is a post-training technique where human preferences guide model behavior. It uses a reward model trained on human-labeled responses and fine-tunes the LLM via reinforcement learning. It's critical in models like ChatGPT to align outputs with human expectations and ethics.
+
+## 27. What are safety layers in LLM deployments?
+Safety layers are mechanisms built around LLMs to prevent harmful or inappropriate outputs. This include moderation filters, guardrails, rejection sampling, and constitutional AI techniques. They're essential in regulated environments like finance or healthcare.
+
+## 28. What is model alignment in the context of LLMs?
+Model alignment refers to the process of ensuring that an LLM behaves in accordance with human values, legal standards, and organizational goals. Techniques include fine-tuning, RLHF, and prompt design. Alignment is vital for trustworthiness and safe AI deployment.
+
+## 29. How do retrieval-augmented generation (RAG) systems work?
+RAG systems combine LLMs with external knowledge retrieval. First, a search component fetches relevant documents, then, the LLM uses them to generate responses. This improves factual accuracy, reduces hallucination, and enables real-time knowledge access.
+
+## 30. What is a vector database and how is it used with LLMs?
+Vector databases (like Qdrant, Pinecone, FAISS) store text embeddings as vectors and allow fast similarity search. LLM can generate embeddings for queries and match them against stored vectors, enabling semantic search, recommendation, and contextual grounding.
+
+## 31. What is chain-of-thought prompting?
+Chain-of-thought (CoT) prompting encourages the LLM to break down reasoning into steps, improving performance in logic-heavy tasks like arithmetic or multi-hop questions. For example, asking "Let's think step by step" can significantly boost reasoning accuracy.
+
+## 32. How does an LLM handle ambiguous inputs?
+LLMs infer meaning based on context but may struggle with ambiguous prompts. Techniques like clarification questions, few-shot prompting, or disambiguation through instruction fine-tuning help models respond more accurately.
+
+## 33. What is a system prompt in LLMs?
+A system prompt is a hidden instruction provided to the model to shape its behavior throughout a session. It defines tone, role, or constraints (e.g., "You are a helpful medical assistant"). System prompts are crucial for controlling model output in multi-turn interactions.
+
+## 34. How are embeddings used for personalization?
+LLM-generated embeddings can capture user preferences, query history, or content interactions. These vectors are used to personalize responses or recommendations, making AI assistants more context-aware and user-centric.
+
+## 35. What are hallucination mitigation techniques in LLMs?
+Mitigation strategies include:
+* RAG or grounding with verified knowledge bases
+* Confidence scoring
+* Few-shot or CoT prompting
+* Post-hoc fact-checking using external tools
+
+These reduce false outputs in mission-critical applications.
+
+## 36. What is model quantization and why is it useful?
+Quantization reduces model size and speeds up inference by converting weights from 32-bit floating point to 8-bit or lower. While it may introduce minor accuracy loss, it enables LLM deployment on edge devices and improves scalability.
+
+## 37. What is LoRA (Low-Rank Adaptation) in LLM fine-tuning?
+LoRA is a parameter-efficient fine-tuning technique that injects trainable low-rank matrices into transformer layers, avoiding the need to update the entire model. It drastically reduces compute cost and memory usage during task-specific adaptation.
+
+## 38. What is a multi-modal LLM?
+A multi-modal LLM can process and generate across text, image, audio, and video inputs. Models like GPT-4o or Gemini combine vision and language understanding, enabling tasks like image captioning, diagram Q&A, or even speech-to-text reasoning.
+
+## 39. How do LLMs support enterprise search?
+LLMs enhance enterprise search by understanding semantic intent and retrieving relevant documents using embeddings and RAG. They also summarize, rank, and answer questions over internal content, transforming knowledge management and decision support.
+
+## 40. What is synthetic data generation using LLMs?
+LLMs can create labeled examples to augment datasets for training smaller models or testing NLP pipelines. For instance, generating fake customer support chats or legal clauses accelerates AI development without requiring expensive human labeling.
