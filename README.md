@@ -142,3 +142,11 @@ LLMs enhance enterprise search by understanding semantic intent and retrieving r
 
 ## 40. What is synthetic data generation using LLMs?
 LLMs can create labeled examples to augment datasets for training smaller models or testing NLP pipelines. For instance, generating fake customer support chats or legal clauses accelerates AI development without requiring expensive human labeling.
+
+## 41. What is the difference between autoregressive and autoencoding models?
+Autoregressive models, such as GPT, are designed to generate text by predicting the next token based on the previous ones. This means they operate in a unidirectional fashion, left to right making them ideal for generative tasks like text completion or chatbot responses. \
+On the other hand, autoencoding models like BERT are trained to reconstruct masked tokens by learning context from both left to right directions (bidirectional). This makes them suitable for understanding tasks such as sentiment analysis, text classification, and question answering.
+The key distinction lies in how they learn and apply context, and each is optimized for different types of downstream NLP tasks.
+
+## 42. What is the role of layer normalization in LLMs?
+Layer normalization is a stabilization technique used within transformer layers of LLMs to normalize inputs across the feature dimension. It ensures that each neuron's output distribution remains consistent, which speeds up training and improves convergence. Without normalization, deep models often face exploding or vanishing gradients, making training unstable. Layer normalization helps maintain gradient flow and reduces internal covariate shift, which is critical in training large-scale LLMs with billions of parameters.
