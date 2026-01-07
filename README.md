@@ -46,3 +46,31 @@ key challenges include:
 * Hallucination: LLMs may confidently generate incorrect information.
 * Bias: Models may reflect societal or dataset biases.
 * Data privacy: Sensitive inputs need to be managed carefully.
+
+## 13. What is a hallucination in LLMs?
+Hallucination refers to the generation of plausible but incorrect or fictional information. For example, the model might invent citations, fake statistics, or historical facts. It's one of the most studied failure modes and is especially problematic in high-stakes applications like mediciine or law.
+
+## 14. Are LLMs deterministic in their responses?
+Not inherently. LLMs use probabilistic sampling methods (e.g., top-k, nucleus sampling) when generating text. This means responses can vary across runs with the same input. However, by setting temperature to 0 and using greedy decoding, you can force deterministic outputs.
+
+## 15. What is the temperature setting in LLMs?
+Temperature controls randomness in output generation:
+* Low temperature (e.g., 0.2): More focused, deterministic outputs.
+* High temperature (e.g., 0.9): More diverse and creative, but less predictable.
+
+It's a trade-off between accuracy and creativity, useful in both business and creative contexts.
+
+## 16. How does transfer learning apply to LLMs?
+LLMs use transfer learning by leveraging generalized pretraining knowledge and adapting it to specific downstream tasks through fine-tuning or prompt-based learning. This significantly reduces the data and compute needed for new applications.
+
+## 17. What is pretraining and how does it differ from fine-tuning?
+Pretraining is the large-scale unsupervised learning phase where the model learns general language structure and world knowledge. Fine-tuning comes afterward and is task-specific. Together, they form the two-stage pipeline that powers most state-of-the-art LLMs today.
+
+## 18. What is the role of attention in LLMs?
+Attention mechanisms allow the model to weigh the importance of each word relative to others in a sentence. For example, in the phrase "The thropy didn't fit in the suitcase because it was too small", attention helps resolve the reference of "it". This is central to understanding context and reasoning.
+
+## 19. How do LLMs differ from traditional NLP models?
+Traditional NLP approaches were task-specific and relied heavily on feature engineering and labeled data. LLMs are end-to-end models that learn representations directly from raw text, offering much better generalization and fewer domain constraints. They're also far more scalable and flexible across tasks.
+
+## 20. Can LLMs understand non-textual data like images or audio?
+Base LLMs are text-only. However, multimodal models like GPT-4o, Gemini, and Claude 3 Opus integrate vision, audio, and even video. These models can process PDFs, screenshots, diagrams, or spoken language-expanding the scope of LLM applications beyond traditional NLP.
